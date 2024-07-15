@@ -1,53 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anciens Meubles pour une Nouvelle Vie
 
-example de push
+Une plateforme de gestion pour un magasin de meubles de seconde main, permettant aux utilisateurs de s'inscrire, de parcourir les meubles en vente, et de gérer le stock pour l'administrateur.
 
-## Getting Started
+## Table des matières
 
-First, run the development server:
+- [Description](#description)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Utilisation](#utilisation)
+- [Captures d'écran](#captures-décran)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Description
+
+Ce projet vise à créer une plateforme web pour la gestion d'un magasin de meubles de seconde main. Il permettra aux utilisateurs de s'inscrire, de parcourir les meubles disponibles à la vente, et pour l'administrateur de gérer le stock et les meubles proposés par les utilisateurs.
+
+## Fonctionnalités
+
+### Utilisateurs
+
+- Inscription et connexion
+- Parcourir les meubles en vente
+- Afficher les détails d'un meuble
+- Créer un compte pour personnaliser l'affichage des meubles
+- Proposer des meubles à vendre (visible seulement par l'administrateur)
+
+### Administrateur
+
+- Connexion sécurisée
+- Gestion des meubles : ajouter, modifier, supprimer
+- Validation des meubles proposés par les utilisateurs
+- Suivi des statuts des meubles
+
+## Technologies Utilisées
+
+- **Langages** : HTML, CSS, JavaScript
+- **Framework Backend** : NodeJS/express
+- **Framework Frontend** : NextJS (app directory)
+- **Base de Données** : Supabase (PostgreSQL)
+- **Autres Outils** : Postman pour les APIs, Tailwind pour le CSS
+
+Ouvrez votre navigateur et allez à l'adresse http://localhost:3000.
+
+## Utilisation
+
+**Pour les Utilisateurs**
+
+- _Inscription et Connexion_ : <br/>Créez un compte ou connectez-vous pour accéder aux fonctionnalités personnalisées.
+  <br/>
+- _Parcourir les Meubles_ : <br/>Consultez les meubles en vente, cliquez sur un meuble pour voir les détails et acheter.
+  <br/>
+- _Proposer un Meuble_ : <br/>Si connecté, proposez des meubles à vendre en remplissant un formulaire.
+  <br/>
+
+**Pour l'Administrateur**
+
+- _Connexion_ : <br/>Connectez-vous pour accéder aux fonctionnalités d'administration.
+  <br/>
+- _Gérer les Meubles_ : <br/>Ajoutez, modifiez ou supprimez des meubles depuis la page de gestion.
+  <br/>
+- _Valider les Propositions_ : <br/>Consultez et validez les meubles proposés par les utilisateurs.
+
+## Commandes utiles
+
+```json
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "server": "dotenv -- node serveur_api/serveurtest.js",
+    "server:maureen": "dotenv -- nodemon serveur_api/index.js",
+    "db:generate-migration": "prisma migrate dev --schema serveur_api/prisma/schema.prisma",
+    "db:pull": "prisma db pull --schema serveur_api/prisma/schema.prisma",
+    "db:generate-client": "prisma generate --schema serveur_api/prisma/schema.prisma"
+  },
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Captures d'écran:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+_Page d'accueil:_
+[![Page d'accueil](https://i.goopics.net/jhy4pi.jpg)](https://goopics.net/i/jhy4pi)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+_page catalogue:_
+[![Page catalogue](https://i.goopics.net/c04x94.jpg)](https://goopics.net/i/c04x94)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## LUNDI 24 JUIN - DÉBUT PROJET ##
-
-## Front 
-Découpage URL localhost:3000/pageaccueil/meubles/détails_meubles
-trois découpages front
-Découpage différent du front, par ex une request suffisante pour fetch les meubles sur les trois pages
-
-
-## LUNDI 24 JUIN - DÉBUT PROJET ##
-
-## Front 
-Découpage URL localhost:3000/pageaccueil/meubles/détails_meubles
-trois découpages front
-Découpage différent du front, par ex une request suffisante pour fetch les meubles sur les trois pages
+_Page de gestion des produits: (administrateur)_
+[![Page de gestion des produits](https://i.goopics.net/3iwl30.jpg)](https://goopics.net/i/3iwl30)
