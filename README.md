@@ -1,4 +1,4 @@
-# Anciens Meubles pour une Nouvelle Vie
+# Schlecht Möbel
 
 Une plateforme de gestion pour un magasin de meubles de seconde main, permettant aux utilisateurs de s'inscrire, de parcourir les meubles en vente, et de gérer le stock pour l'administrateur.
 
